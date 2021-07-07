@@ -4,12 +4,12 @@
 int main()
 {
 	HMODULE hModule = GetModuleHandle(NULL); 
-	HRSRC hResource = FindResourceW(hModule, MAKEINTRESOURCEW(101), L"CPP"); // resource'a eklenmis dosyamizin konumu
+	HRSRC hResource = FindResourceW(hModule, MAKEINTRESOURCEW(101), L"CPP"); // resource'a eklenmis dosyamizin adi
 
 
 	HGLOBAL hMemory = LoadResource(hModule, hResource);   //resource' u yüklesin
 	DWORD dwSize = SizeofResource(hModule, hResource);   //resource' un boyutu
-	LPVOID lpAddress = LockResource(hMemory);			//LockResource' un dönüs degeri,resourceumuzdaki dosyanýn ilk baytýnýn iþaretçisidir.
+	LPVOID lpAddress = LockResource(hMemory);			//LockResource' un dönüs degeri, resourceumuzdaki dosyanin ilk baytinin isaretçisidir.
 
 	HANDLE hFile;
 	DWORD dwBytesWritten = 0;
@@ -22,8 +22,8 @@ int main()
 		FILE_ATTRIBUTE_NORMAL, 
 		NULL);
 	BOOL ErrorWrite = WriteFile(
-		hFile,           //oluþturduðumuz dosyanýn handle' ý
-		lpAddress,       //dosyanýn ilk baytý
+		hFile,           //olusturdugumuz dosyanin handle' i
+		lpAddress,       //dosyanin ilk bayti
 		dwSize,			 //boyut
 		&dwBytesWritten, 
 		NULL);          
