@@ -4,4 +4,4 @@
 Kaynak Dosyaları >> Ekle >> Kaynak >> Özel >> "CPP" </br>
 Ardından klasörde oluşan "cpp.bin" adlı dosyanın yerine istediğimiz bir dosyayı koyabiliriz.
 </br>
-Program resource' a gömdüğümüz dosyayı "hello.exe" adıyla bulunan dizine oluşturur.
+Program resource' a gömdüğümüz dosyayı "hello.exe" adıyla, bulunan dizine oluşturur.
