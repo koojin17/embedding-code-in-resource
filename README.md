@@ -1,0 +1,2 @@
+# embedding-code-in-resource
+ 
